@@ -28,9 +28,15 @@ let _btnFilterByMonth = $('.btnfilterbymonth');
 
         if (_fechaDiario.val() == "") {
             $('.lbl-datepicker').addClass('inValid').css('background-color', '#efa1a1');
+            _fechaDiario.addClass('alert-danger');
+            $('.em-msg-day').css('display', 'block');
             return;
         }
-        else { $('.lbl-datepicker').removeClass('inValid').css('background-color', '#94e294'); }
+        else {
+            $('.lbl-datepicker').removeClass('inValid').css('background-color', '#94e294');
+            $('.em-msg-day').css('display', 'none');
+            _fechaDiario.removeClass('alert-danger').addClass('alert-success');
+        }
 
         let _fechaVal = _fechaDiario.datepicker('getDate');
 
@@ -47,14 +53,21 @@ let _btnFilterByMonth = $('.btnfilterbymonth');
 
     function getEchangeRateByMonth() {
 
+        let _fechaMonth = $('#datepickermonth');
 
-        if ($('#btnfilterbymonth').val() == "") {
+        if (_fechaMonth.val() == "") {
             $('.lbl-datepicker-month').addClass('inValid').css('background-color', '#efa1a1');
+            _fechaMonth.addClass('alert-danger');
+            $('.em-msg-month').css('display','block');
             return;
         }
-        else { $('.lbl-datepicker-month').removeClass('inValid').css('background-color', '#94e294'); }
+        else {
+            $('.lbl-datepicker-month').removeClass('inValid').css('background-color', '#94e294');
+            $('.em-msg-month').css('display', 'none');
+            _fechaMonth.removeClass('alert-danger').addClass('alert-success');
+        }
 
-        let _fechaVal = _fechaDiario.datepicker('getDate');
+        let _fechaVal = _fechaMonth.datepicker('getDate');
 
         let objectDataByMonth = {
             anyo: _fechaVal.getFullYear(),
