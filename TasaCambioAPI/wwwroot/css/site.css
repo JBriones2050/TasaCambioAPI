@@ -1,18 +1,96 @@
-html {
-  font-size: 14px;
+header,
+footer {
+    background-color: #c2e4ae;
+    overflow: hidden;
+}
+.navbar {
+    background-color: #b0ce9f !important;
+    width: 40em !important;
+    font-size: 18px !important;
+}
+.logo {
+    width: 60px;
+    height: auto;
+    margin: 5px;
+    float: left;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.menuitem {
+    display: inline-block;
+    margin: 5px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.menulink {
+    text-decoration: none;
 }
 
-body {
-  margin-bottom: 60px;
+    .menulink:hover {
+        color: white;
+    }
+
+nav {
+    float: right;
+}
+
+.subtitle {
+    float: left;
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+.subtitle {
+    margin-top: 0;
+    float: left;
+}
+
+.copyright {
+    text-align: center
+}
+
+@media screen and (max-width: 700px) {
+    .btnmenu {
+        position: absolute;
+        top: 25px;
+        right: 15px;
+    }
+
+    .menu, .subtitle {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .btnmenu {
+        display: none;
+    }
+
+    #menu, #subtitle {
+        display: block !important;
+    }
+}
+
+
+.container {
+    margin: 0 5px;
+}
+
+@media screen and (min-width:701px) {
+    .container {
+        width: 690px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:1001px) {
+    .container {
+        width: 990px;
+    }
+}
+
+@media screen and (min-width:1201px) {
+    .container {
+        width: 1190px;
+    }
 }
