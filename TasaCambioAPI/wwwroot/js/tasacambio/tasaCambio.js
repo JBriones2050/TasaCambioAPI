@@ -43,7 +43,8 @@
             anyo: _fechaVal.getFullYear(),
             mes: (_fechaVal.getMonth() + 1), // Considerando que Enero = 0 (donde inicia)
             dia: _fechaVal.getDate()
-        } 
+        }
+        let info = $('.info-day');
          //console.info('data   ', objData);
      
         requestDailyExchangeRateByDay(objData);
