@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Tasa de Cambio del Dia";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Filtre por dia la Tasa de Cambio </p>
+
+
+<div class="well">
+    <div class="row">
+        <section class="col col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="">
+                <div class="row">
+                    <section class='col col-xs-6 col-sm-6 col-md-6 col-lg-8'>
+                        <label class="lbl-datepicker" style="width:90%;">
+
+                            <input type='text' class="form-control datetimepicker" id='datetimepicker' />
+                        </label>
+                    </section>
+                    <section class='col col-xs-6 col-sm-6 col-md-6 col-lg-2'>
+
+                        <a class="btn btn-default btnfilterbyday pull-left"> Buscar por Dia &raquo;</a>
+
+                    </section>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="row" style="margin-top: 5em;">
+        <section class="col col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="">
+                <label class="" style="display:block;"> Tasa del Dia: </label>
+                <label class="font-lg" style="width:50%">
+                    <input type="text" placeholder="Resultado de la Tasa del Dia..." value="" class="tasacambio form-control" readonly disabled style="" />
+                </label>
+            </div>
+        </section>
+    </div>
+
+</div>

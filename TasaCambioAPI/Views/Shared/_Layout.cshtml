@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tasa de Cambio Web API </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" /> 
+
+      <!-- Bootstrap -->
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css'
+          media="screen" />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js" type="text/javascript"></script>
+     
+    <link href="~/css/plugins/datatables/datatables.min.css" rel="stylesheet" />
+
+     <script>
+        baseUrl    = '@Url.Action("")';
+       urlContent = '@Url.Content("~/")';
+
+    </script>
+    <script src="~/js/plugins/datatable/datatables.min.js"></script>
+
+    <!-- Bootstrap DatePicker -->
+    <script type="text/javascript">
+        $(function () 
+        {
+            $('#datetimepicker').datepicker({
+            dateFormat: 'dd/mm/yy',
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            changeMonth: true,
+            changeYear: true
+            });
+
+        }); 
+
+    </script>
+
+</head>
+
+
+
+    <style>
+        .truncate-text-jb {
+            max-width: 137px !important;
+            text-overflow: ellipsis;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .infotmation-button {
+            display: block !important;
+            font-size: larger !important;
+            text-decoration: none !important;
+            padding: 2px 0px !important;
+        }
+
+            .infotmation-button:hover {
+                text-decoration: none !important;
+            }
+
+        em.invalid {
+            color: #cc5965;
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        .sweet-alert button.cancel {
+            background-color: #114f77;
+        }
+
+            .sweet-alert button.cancel:hover {
+                background-color: rgb(17 79 119 / 0.86);
+            }
+
+        .sweet-alert[data-has-cancel-button=false] button {
+            box-shadow: none !important;
+            background-color: #0f96db !important;
+        }
+
+        .color-estado-abierta {
+            background-color: rgb(120 230 152) !important;
+            height: auto !important;
+            width: 23em !important;
+        }
+
+        .color-estado-cocina {
+            background-color: rgb(194 137 59 / 0.71) !important;
+            height: auto !important;
+            width: 23em !important;
+        }
+
+        .color-estado-caja {
+            background-color: rgb(225 69 84 / 0.91) !important;
+            height: auto !important;
+            width: 23em !important;
+        }
+
+        .color-estado-pagado {
+            background-color: rgb(28 106 213 / 0.94) !important;
+            height: auto !important;
+            width: 23em !important;
+        }
+    </style>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TasaCambioAPI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Daily">Tasa de Cambio del Dia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Month">Tasa de Cambio Por Mes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+         
+    </header>
+ 
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - TasaCambioAPI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> 
+   
+    
+    @await RenderSectionAsync("Scripts", required: false)
+
+      
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/js/tasacambio/tasaCambio.js?v=0.2"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\animate.css" />
+    <Content Remove="wwwroot\css\bootstrap.css" />
+    <Content Remove="wwwroot\css\bootstrap.css.map" />
+    <Content Remove="wwwroot\css\bootstrap.min.css" />
+    <Content Remove="wwwroot\css\bootstrap.min.css.map" />
+    <Content Remove="wwwroot\css\email.css" />
+    <Content Remove="wwwroot\css\plugins\sweetAlertStyles\sweetalert.css" />
+    <Content Remove="wwwroot\css\style.css" />
+    <Content Remove="wwwroot\js\app\inspinia.js" />
+    <Content Remove="wwwroot\js\app\skin.config.min.js" />
+    <Content Remove="wwwroot\js\inspinia.js" />
+    <Content Remove="wwwroot\js\plugins\bootstrap-markdown\bootstrap-markdown.js" />
+    <Content Remove="wwwroot\js\plugins\bootstrap-markdown\markdown.js" />
+    <Content Remove="wwwroot\js\plugins\datatable\datatables.min.js" />
+    <Content Remove="wwwroot\js\plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Remove="wwwroot\js\plugins\jquery-ui\jquery-ui.css" />
+    <Content Remove="wwwroot\js\plugins\jquery-ui\jquery-ui.js" />
+    <Content Remove="wwwroot\js\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Remove="wwwroot\js\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Remove="wwwroot\js\plugins\sweetalert\sweetalert.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Model\Model\TasaCambioDTO.cs" Link="Models\TasaCambioDTO.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Content\css\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\animate.css" />
+    <None Include="wwwroot\css\bootstrap.css" />
+    <None Include="wwwroot\css\bootstrap.css.map" />
+    <None Include="wwwroot\css\bootstrap.min.css" />
+    <None Include="wwwroot\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\css\email.css" />
+    <None Include="wwwroot\css\plugins\sweetAlertStyles\sweetalert.css" />
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\js\app\inspinia.js" />
+    <None Include="wwwroot\js\app\skin.config.min.js" />
+    <None Include="wwwroot\js\inspinia.js" />
+    <None Include="wwwroot\js\plugins\bootstrap-markdown\bootstrap-markdown.js" />
+    <None Include="wwwroot\js\plugins\bootstrap-markdown\markdown.js" />
+    <None Include="wwwroot\js\plugins\datatable\datatables.min.js" />
+    <None Include="wwwroot\js\plugins\datepicker\bootstrap-datepicker.js" />
+    <None Include="wwwroot\js\plugins\jquery-ui\jquery-ui.css" />
+    <None Include="wwwroot\js\plugins\jquery-ui\jquery-ui.js" />
+    <None Include="wwwroot\js\plugins\jquery-ui\jquery-ui.min.css" />
+    <None Include="wwwroot\js\plugins\jquery-ui\jquery-ui.min.js" />
+    <None Include="wwwroot\js\plugins\sweetalert\sweetalert.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SoapFormatter" Version="1.1.9" />
+  </ItemGroup>
+
+</Project>
