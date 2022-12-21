@@ -7,6 +7,8 @@ footer {
     background-color: #b0ce9f !important;
     width: 40em !important;
     font-size: 18px !important;
+    padding:2px !important;
+    margin: 5px 0 0 2px;
 }
 .logo {
     width: 60px;

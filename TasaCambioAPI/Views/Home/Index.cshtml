@@ -1,27 +1,273 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model bool
+
+@{
+    Layout = null;
+    ViewBag.Title = "Home";
 }
 
-<div class="jumbotron">
-    <h3> Tipo de Cambio - Banco Central de Nicaragua </h3>
-    <p class="lead">
-        The following operations are supported. For a formal definition, please review the Service Description.
-    </p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-</div>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
-<div class="row">
-    <div class="col-lg-2">
+    <!-- Add jQuery Style direct - used for jQGrid plugin -->
+    <link href="@Url.Content("~/js/plugins/jquery-ui/jquery-ui.css")" rel="stylesheet" type="text/css" />
+    <link href="~/css/slick/slick.css" rel="stylesheet">
+    <link href="~/css/slick/slick-theme.css" rel="stylesheet"> 
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet">
+    <script src="~/js/plugins/bootstrap-markdown/bootstrap-markdown.js"></script>
+    <script src="~/js/plugins/bootstrap-markdown/markdown.js"></script>
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/email.css" rel="stylesheet" />
+
+    <style>
+
+        .landing-page .navbar-default .nav li a {
+            color:#fff !important;
+            font-family: 'Open Sans', helvetica, arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .slide-index {
+            width: 450px !important;
+            height: 400px !important;
+        }
+
+        .image-imitation {
+            padding: 40px !important;
+        }
+
+      
+
+        .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+            margin-left: 30px !important;
+        }
+
+     
+    </style>
+
+</head>
+
+<body id="page-top" class="landing-page">
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #205a1ac4 !important;">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                   
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                     
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item">
+                                <a class="page-scroll" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" asp-area="" asp-controller="Home" asp-action="Daily">Tasa de Cambio del Dia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" asp-area="" asp-controller="Home" asp-action="Month">Tasa de Cambio Por Mes</a>
+                            </li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-    <div class="col-lg-8">
+    <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+            <li data-target="#inSlider" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="container">
+                    <div class="carousel-caption">
+                        
 
-        <div class="owl-wrapper-outer">
+                    </div>
+                    <div class="carousel-image wow zoomIn">
+                    </div>
+                </div>
+                <!-- Set background for slide in css -->
+                <div class="header-back one"></div>
+
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="carousel-caption blank">
+                         
+
+                    </div>
+                </div>
+                <!-- Set background for slide in css -->
+                <div class="header-back two"></div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <section id="features" class="container services">
+        <div class="row hide">
+            <div class="col-sm-3">
+                Mision
+            </div>
+            <div class="col-sm-3">
+                Vision
+            </div>
+            <div class="col-sm-3">
+                Experiencia
+            </div>
+        </div>
+    </section>
+
+    <section class="container features">
+
+       
+
+    </section>
+
+    <section id="team" class="gray-section team">
+        <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>Our Team</h1>
+                </div>
+            </div>
+            <div class="row">
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="row">
+            </div>
+            <div class="row features-block">
+                <div class="col-lg-3 features-text wow fadeInLeft">
+                </div>
+                <div class="col-lg-6 text-right m-t-n-lg wow zoomIn">
+                    <img src="~/Images/landing/test.png" class="img-responsive" alt="dashboard">
+                </div>
+                <div class="col-lg-3 features-text text-right wow fadeInRight">
+                </div>
+            </div>
         </div>
 
-    </div>
-    <div class="col-lg-2">
-    </div>
-</div>
+    </section>
 
+
+    <section id="testimonials" class="navy-section testimonials" style="margin-top: 0">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center wow zoomIn">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="comments gray-section" style="margin-top: 0">
+        <div class="container">
+            <div class="row">
+                
+            </div>
+           
+        </div>
+
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 features-text">
+                </div>
+                <div class="col-lg-5 features-text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 features-text">
+                </div>
+                <div class="col-lg-5 features-text">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="pricing" class="pricing">
+        <div class="container">
+             
+        </div>
+
+    </section>
+
+    <section id="contact" class="gray-section contact">
+        <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>Contact Us</h1>
+                </div>
+            </div>
+            <div class="row m-b-lg">
+                <div class="col-lg-3 col-lg-offset-3">
+                    <address>
+                        <a href="https://api.whatsapp.com/send?phone=50558253431&text=Hola!%20Quiere%20generar%20una%20orden!" class="_9rne _9vcv">
+                            <img alt="WhatsApp Main Page" src="https://static.xx.fbcdn.net/rsrc.php/ym/r/36B424nhiL4.svg">
+                        </a><br /><br />
+                        <strong><span class="navy">taza de Cambio.</span></strong><br />
+                        <div class="fb-page"
+                             data-tabs="timeline,events,messages"
+                             data-href="https://www.facebook.com/YoloBookStore"
+                             data-width="380"
+                             data-hide-cover="false"></div>
+
+                    </address>
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                </div>
+            </div>
+        </div>
+    </section>
  
- 
+     
+
+</body>
+</html>

@@ -48,11 +48,11 @@ let _btnFilterByMonth = $('.btnfilterbymonth');
     function getEchangeRateByMonth() {
 
 
-        if (_fechaDiario.val() == "") {
-            $('.lbl-datepicker').addClass('inValid').css('background-color', '#efa1a1');
+        if ($('#btnfilterbymonth').val() == "") {
+            $('.lbl-datepicker-month').addClass('inValid').css('background-color', '#efa1a1');
             return;
         }
-        else { $('.lbl-datepicker').removeClass('inValid').css('background-color', '#94e294'); }
+        else { $('.lbl-datepicker-month').removeClass('inValid').css('background-color', '#94e294'); }
 
         let _fechaVal = _fechaDiario.datepicker('getDate');
 
