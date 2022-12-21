@@ -15,7 +15,7 @@
             <div class="col-lg-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5> Listado de tasa de Cambio del mes Seleccionado.</h5>
+                        <h3> Listado de tasa de Cambio del mes de @(Model.Select(a=> a.fecha).FirstOrDefault().ToString("MMMM, yyyy")).</h3>
                     </div>
                     <div class="ibox-content">
                         <div class="table-responsive">
@@ -34,7 +34,7 @@
                                         foreach (var item in Model)
                                         {
                                             <tr>
-                                                <td>@item.fecha.ToString("dd,MM yyyyy") </td>
+                                                <td>@item.fecha.ToString("dd/MM/yyyyy") </td>
                                                 <td>@item.valor </td>
                                                 <td>@item.anyo  </td>
                                                 <td>@item.mes  </td>
