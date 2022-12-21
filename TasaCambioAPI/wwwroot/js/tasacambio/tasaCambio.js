@@ -1,27 +1,26 @@
 ﻿
 
+    /**
+     * Definicion de Variables de control 
+     * */
 
-let _btnFilterByday = $('.btnfilterbyday');
-let _fechaDiario = $('.datetimepicker');
-let _btnFilterByMonth = $('.btnfilterbymonth');
+    let _btnFilterByday     = $('.btnfilterbyday');
+    let _fechaDiario        = $('.datetimepicker');
+    let _btnFilterByMonth   = $('.btnfilterbymonth');
 
     initEvent();
 
     /***
-     * 
+     * inicializar los eventos
      * 
      * *****/
     function initEvent() {
         _btnFilterByday.on('click', getEchangeRateByDay);
         _btnFilterByMonth.on('click', getEchangeRateByMonth);
         
-    }
-
-    
-
+    } 
     /***
-     * 
-     * 
+     *  Validaciones y capruta de datos para filtrar por dia
      * */ 
     function getEchangeRateByDay()
     {
@@ -50,7 +49,9 @@ let _btnFilterByMonth = $('.btnfilterbymonth');
         requestDailyExchangeRateByDay(objData);
     }
 
-
+    /***
+     *  Validaciones y capruta de datos para filtrar por Mes
+     * * */
     function getEchangeRateByMonth() {
 
         let _fechaMonth = $('#datepickermonth');
@@ -79,8 +80,8 @@ let _btnFilterByMonth = $('.btnfilterbymonth');
 
 
     /*
-     * 
-     ********/
+     * Peticion Ajax cuando se hace el filtrado por dia
+     * *****/
     function requestDailyExchangeRateByDay(objData) { 
 
         var ajaxResult = $.ajax({
@@ -121,7 +122,7 @@ let _btnFilterByMonth = $('.btnfilterbymonth');
  
 
     /*
-     * 
+     * Peticion Ajax cuando se hace el filtrado por Mes
      * **** */
     function requestDailyExchangeRateByMonth(objectRequest) {
 

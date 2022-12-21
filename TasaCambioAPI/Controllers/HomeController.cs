@@ -23,23 +23,33 @@ namespace TasaCambioAPI.Controllers
         {
             _logger = logger;
         }
-
+        /// <summary>
+        /// Vista de la interfaz de home
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             return View();
         }
-
+        /// <summary>
+        /// Vista de la interfaz de filtrado por dia
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Daily()
         {
             return View();
         }
+        /// <summary>
+        /// Vista de la interfaz de filtrado por Mes
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Month()
         {
             return View();
         }
       
         /// <summary>
-        /// [HttpPost]
+        /// metodo que me retornara el resultado del filtrado de la tasa de cambio del dia
         /// </summary>
         /// <param name="dateFilter"></param>
         /// <returns></returns>
@@ -68,6 +78,12 @@ namespace TasaCambioAPI.Controllers
 
         }
 
+        /// <summary>
+        /// metodo que me retornara el resultado del filtrado de la tasa de cambio
+        /// </summary>
+        /// <param name="dateFilter"></param>
+        /// <returns></returns>
+        
         [HttpPost]
         public async Task<ActionResult> GetExchangeRateByMonth(TasaCambioDTO dateFilter)
         {
@@ -100,7 +116,11 @@ namespace TasaCambioAPI.Controllers
 
         }
          
-
+        /// <summary>
+        ///  mapeo de las propiedades con mi objeto para renderizar las lista de la tasa de cambio por mes
+        /// </summary>
+        /// <param name="resultMes"></param>
+        /// <returns></returns>
         private List<TasaCambioDTO> MappearPropiedades(XmlElement resultMes)
         {
              List<TasaCambioDTO> tipoCambioList = new List<TasaCambioDTO>();
